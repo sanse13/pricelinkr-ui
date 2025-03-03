@@ -1,59 +1,48 @@
-# PricelinkrUi
+# PriceLinkr
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.5.
+**La plataforma inteligente de comparación de precios para servicios B2B.**
 
-## Development server
+## 🚀 Introducción
+PriceLinkr es una aplicación web que permite a empresas y emprendedores comparar precios de servicios B2B en su zona y sector. La plataforma recopila, organiza y analiza precios de diferentes proveedores para facilitar la toma de decisiones informadas.
 
-To start a local development server, run:
+## 🎯 Características Principales
+- 🔍 **Búsqueda Avanzada**: Encuentra servicios B2B filtrando por ubicación, categoría y rango de precios.
+- 📊 **Comparación de Precios**: Visualiza y compara precios de múltiples proveedores en una interfaz intuitiva.
+- 🏆 **Rankings y Valoraciones**: Descubre los proveedores mejor valorados por otros usuarios.
+- 📡 **Actualización en Tiempo Real**: Datos siempre frescos gracias a integraciones con APIs y web scraping.
+- 📈 **Dashboard Personalizado**: Las empresas pueden monitorear tendencias de precios y analizar la competencia.
 
+## 🛠️ Tecnologías Utilizadas
+- **Frontend**: Angular + Tailwind CSS.
+- **Backend**: NestJS.
+- **Base de Datos**: MongoDB.
+- **Scraping y APIs**: Playwright y Open Data sources para la recolección de precios.
+- **Infraestructura**: AWS (EC2, S3, Lambda) para escalabilidad.
+
+## 🏗️ Instalación y Configuración
 ```bash
-ng serve
+# Clonar el repositorio
+git clone https://github.com/tuusuario/pricelinkr.git
+cd pricelinkr
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp .env.example .env
+
+# Iniciar la aplicación en desarrollo
+npm run dev
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+## 🤝 Contribuciones
+¡Las contribuciones son bienvenidas! Si deseas colaborar, sigue estos pasos:
+1. Haz un **fork** del repositorio.
+2. Crea una nueva **rama** (`feature/nueva-funcionalidad`).
+3. Realiza tus cambios y sube un **pull request**.
 
-## Code scaffolding
+## 📜 Licencia
+Este proyecto está bajo la licencia **MIT**.
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+## 📩 Contacto
+Para dudas o sugerencias, puedes escribir a **contacto@pricelinkr.com**.
