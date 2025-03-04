@@ -34,29 +34,30 @@ export class LandingComponent implements OnInit {
   typeWriterText = 'Busca un servicio B2B y compara precios al instante...';
   typeWriterSpeed = 50;
   typeWriterIndex = 0;
-  typeWriterInterval = 0;
 
   private readonly document = inject(DOCUMENT);
 
   ngOnInit(): void {
     const title = this.document.getElementById('type-writer');
+    let typeWriterInterval: any;
+
+    const typeWriter = () => {
+      const title = this.document.getElementById('type-writer');
+      if (!title) {
+        return;
+      }
+      if (this.typeWriterIndex < this.typeWriterText.length) {
+        title.innerHTML += this.typeWriterText.charAt(this.typeWriterIndex);
+        this.typeWriterIndex++;
+      } else {
+        clearInterval(typeWriterInterval);
+      }
+    }
+
     if (!title) { return; }
     title .innerText = '';
-    this.typeWriterInterval = setInterval(() => {
-      this.typeWriter();
+    typeWriterInterval = setInterval(() => {
+      typeWriter();
     }, this.typeWriterSpeed);
-  }
-
-  typeWriter() {
-    const title = this.document.getElementById('type-writer');
-    if (!title) {
-      return;
-    }
-    if (this.typeWriterIndex < this.typeWriterText.length) {
-      title.innerHTML += this.typeWriterText.charAt(this.typeWriterIndex);
-      this.typeWriterIndex++;
-    } else {
-      clearInterval(this.typeWriterInterval);
-    }
   }
 }
