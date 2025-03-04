@@ -1,2 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
 @import "tailwindcss/index.css";
+
+@font-face {
+  font-family: "Poppins";
+  src: url("../public/fonts/Poppins/Poppins-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  @apply mx-12;
+  @apply mt-4;
+}
+
+.title {
+  @apply text-4xl;
+}
+
+body {
+  background-color: white;
+  font-family: Poppins, "sans-serif";
+}
+
+h1 {
+  @apply text-4xl;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
