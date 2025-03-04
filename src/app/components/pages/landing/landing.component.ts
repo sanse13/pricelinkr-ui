@@ -39,6 +39,9 @@ export class LandingComponent implements OnInit {
   private readonly document = inject(DOCUMENT);
 
   ngOnInit(): void {
+    const title = this.document.getElementById('type-writer');
+    if (!title) { return; }
+    title .innerText = '';
     this.typeWriterInterval = setInterval(() => {
       this.typeWriter();
     }, this.typeWriterSpeed);
