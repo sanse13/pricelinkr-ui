@@ -11,10 +11,11 @@ import {
   bootstrapTrophy,
 } from '@ng-icons/bootstrap-icons';
 import { DOCUMENT } from '@angular/common';
+import {RouterLink} from '@angular/router';
 
 @Component({
   selector: 'app-landing',
-  imports: [NgIcon],
+  imports: [NgIcon, RouterLink],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
   viewProviders: [
