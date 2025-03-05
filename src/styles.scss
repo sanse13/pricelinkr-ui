@@ -50,3 +50,17 @@ h4 {
 .animate-fade-up {
   animation: fade-up 1s ease-out forwards;
 }
+
+.pricelinkr-button {
+  padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  border: 2px solid #93c5fd; /* border-2 border-blue-300 */
+  border-radius: 0.5rem; /* rounded-lg */
+  background-color: #93c5fd; /* bg-blue-300 */
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.pricelinkr-button:hover {
+  background-color: #bfdbfe; /* hover:bg-blue-200 */
+}
+
