@@ -52,10 +52,12 @@ export class LandingComponent implements OnInit {
       } else {
         clearInterval(typeWriterInterval);
       }
-    }
+    };
 
-    if (!title) { return; }
-    title .innerText = '';
+    if (!title) {
+      return;
+    }
+    title.innerText = '';
     typeWriterInterval = setInterval(() => {
       typeWriter();
     }, this.typeWriterSpeed);
