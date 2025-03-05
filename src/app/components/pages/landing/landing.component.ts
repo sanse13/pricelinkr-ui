@@ -1,4 +1,12 @@
-import { Component, inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  inject,
+  OnInit,
+  Renderer2,
+  ViewChild,
+} from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
   bootstrap1SquareFill,
@@ -31,36 +39,44 @@ import { RouterLink } from '@angular/router';
     }),
   ],
 })
-export class LandingComponent implements OnInit {
+export class LandingComponent implements AfterViewInit {
+  @ViewChild('typeWriter') typeWriterEl!: ElementRef;
+
   typeWriterText = 'Busca un servicio B2B y compara precios al instante...';
   typeWriterSpeed = 50;
   typeWriterIndex = 0;
 
-  private readonly document = inject(DOCUMENT);
+  constructor(private renderer: Renderer2) {}
 
-  ngOnInit(): void {
-    const title = this.document.getElementById('type-writer');
-    let typeWriterInterval: any;
+  ngAfterViewInit(): void {
+    this.startTypewriter();
+  }
 
-    const typeWriter = () => {
-      const title = this.document.getElementById('type-writer');
-      if (!title) {
-        return;
-      }
+  private startTypewriter() {
+    if (!this.typeWriterEl) {
+      return;
+    }
+
+    this.renderer.setProperty(
+      this.typeWriterEl.nativeElement,
+      'textContent',
+      '',
+    );
+    this.typeWriterIndex = 0;
+
+    const type = () => {
       if (this.typeWriterIndex < this.typeWriterText.length) {
-        title.innerHTML += this.typeWriterText.charAt(this.typeWriterIndex);
+        const char = this.typeWriterText.charAt(this.typeWriterIndex);
+        this.renderer.setProperty(
+          this.typeWriterEl.nativeElement,
+          'textContent',
+          this.typeWriterEl.nativeElement.innerText + char,
+        );
         this.typeWriterIndex++;
-      } else {
-        clearInterval(typeWriterInterval);
+        setTimeout(type, this.typeWriterSpeed);
       }
     };
 
-    if (!title) {
-      return;
-    }
-    title.innerText = '';
-    typeWriterInterval = setInterval(() => {
-      typeWriter();
-    }, this.typeWriterSpeed);
+    type();
   }
 }

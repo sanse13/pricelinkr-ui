@@ -52,15 +52,15 @@ h4 {
 }
 
 .pricelinkr-button {
-  padding: 0.25rem 0.5rem; /* px-2 py-1 */
-  border: 2px solid #93c5fd; /* border-2 border-blue-300 */
-  border-radius: 0.5rem; /* rounded-lg */
-  background-color: #93c5fd; /* bg-blue-300 */
+  padding: 0.25rem 0.5rem;
+  border: 2px solid #93c5fd;
+  border-radius: 0.5rem;
+  background-color: #93c5fd;
   cursor: pointer;
   transition: background-color 0.2s;
   color: white;
 }
 
 .pricelinkr-button:hover {
-  background-color: #bfdbfe; /* hover:bg-blue-200 */
+  background-color: #bfdbfe;
 }
