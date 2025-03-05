@@ -1,13 +1,14 @@
 <div>
   <div class="flex justify-center">
     <h1>
-      Regístrate para poder disfrutar de las funcionalidades de PriceLinkr
+      Regístrate para poder disfrutar de las funcionalidades de
+      <strong class="text-blue-400">PriceLinkr</strong>
       !
     </h1>
   </div>
 
   <div
-    class="border border-gray-400 rounded-lg mt-8 flex justify-center w-1/2 mx-auto"
+    class="border border-gray-400 rounded-lg mt-8 flex justify-center w-1/2 mx-auto animate-fade-up"
   >
     <div class="flex flex-col justify-center my-8">
       <!--email input-->
@@ -55,7 +56,11 @@
         >
       </div>
 
-      <button type="button" class="pricelinkr-button mt-4">
+      <button
+        type="button"
+        class="pricelinkr-button mt-4 font-semibold"
+        [routerLink]="'/home'"
+      >
         Registrarse
       </button>
     </div>
