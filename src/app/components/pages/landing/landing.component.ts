@@ -9,13 +9,13 @@ import {
   bootstrapSearch,
   bootstrapTrophy,
 } from '@ng-icons/bootstrap-icons';
-import { NgIcon, provideIcons } from '@ng-icons/core';
+import { provideIcons } from '@ng-icons/core';
 
 import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-landing',
-  imports: [NgIcon, RouterLink],
+  imports: [RouterLink],
   templateUrl: './landing.component.html',
   styleUrl: './landing.component.scss',
   viewProviders: [

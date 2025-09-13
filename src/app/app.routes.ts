@@ -4,14 +4,16 @@ export const routes: Routes = [
   {
     path: 'settings',
     loadComponent: () =>
-      import('./pages/settings/settings.component').then(
+      import('./components/pages/settings/settings.component').then(
         (m) => m.SettingsComponent,
       ),
   },
   {
     path: 'login',
     loadComponent: () =>
-      import('./pages/login/login.component').then((m) => m.LoginComponent),
+      import('./components/pages/login/login.component').then(
+        (m) => m.LoginComponent,
+      ),
   },
   {
     path: '',
@@ -44,7 +46,7 @@ export const routes: Routes = [
   {
     path: 'register',
     loadComponent: () =>
-      import('./pages/register/register.component').then(
+      import('./components/pages/register/register.component').then(
         (m) => m.RegisterComponent,
       ),
   },
