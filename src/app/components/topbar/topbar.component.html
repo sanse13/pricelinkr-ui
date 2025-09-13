@@ -4,9 +4,17 @@
   <div class="font-bold text-blue-600 text-xl">pricelinkr</div>
   <div class="flex-1 flex justify-center">
     <ul class="flex gap-6 text-blue-700 font-medium">
-      <li><a href="#" class="hover:text-blue-900 transition">Dashboard</a></li>
+      <li>
+        <a [routerLink]="['/dashboard']" class="hover:text-blue-900 transition"
+          >Dashboard</a
+        >
+      </li>
       <li><a href="#" class="hover:text-blue-900 transition">Analíticas</a></li>
-      <li><a href="#" class="hover:text-blue-900 transition">Comparador</a></li>
+      <li>
+        <a [routerLink]="['/home']" class="hover:text-blue-900 transition"
+          >Comparador</a
+        >
+      </li>
       <li>
         <a href="#" class="hover:text-blue-900 transition">Configuración</a>
       </li>

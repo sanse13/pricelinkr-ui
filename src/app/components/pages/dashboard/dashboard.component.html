@@ -1,0 +1,87 @@
+<div class="max-w-5xl mx-auto py-8 px-4">
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+      <div class="text-3xl font-bold text-blue-600">{{ totalComparisons }}</div>
+      <div class="text-gray-500">Comparaciones realizadas</div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+      <div class="text-3xl font-bold text-green-600">
+        {{ totalSaved | currency: "EUR" }}
+      </div>
+      <div class="text-gray-500">Ahorro estimado</div>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+      <div class="text-lg text-gray-700">Última comparación</div>
+      <div class="font-semibold">{{ lastComparison.productName }}</div>
+      <div class="text-sm text-gray-500">{{ lastComparison.date }}</div>
+    </div>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6 mb-8">
+    <h2 class="text-xl font-bold mb-4 text-blue-700">
+      Historial de comparaciones
+    </h2>
+    <table class="w-full text-left">
+      <thead>
+        <tr>
+          <th class="py-2">Producto</th>
+          <th class="py-2">Fecha</th>
+          <th class="py-2">Mejor precio</th>
+          <th class="py-2">Tienda</th>
+          <th class="py-2">Ahorro</th>
+        </tr>
+      </thead>
+      <tbody>
+        @for (c of comparisons; track c.id) {
+          <tr>
+            <td class="py-1">{{ c.productName }}</td>
+            <td class="py-1">{{ c.date }}</td>
+            <td class="py-1">{{ c.bestPrice | currency: "EUR" }}</td>
+            <td class="py-1">{{ c.bestStore }}</td>
+            <td class="py-1 text-green-600 font-semibold">
+              +{{ c.saved | currency: "EUR" }}
+            </td>
+          </tr>
+        }
+      </tbody>
+    </table>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6 mb-8">
+    <h2 class="text-xl font-bold mb-4 text-blue-700">
+      Alertas de bajada de precio
+    </h2>
+    <ul>
+      @for (p of watchedProducts; track p.id) {
+        <li class="mb-2 flex items-center gap-2">
+          <span class="font-semibold">{{ p.name }}</span>
+          <span class="text-sm text-gray-500"
+            >Actual: {{ p.currentPrice | currency: "EUR" }}</span
+          >
+          <span
+            class="text-sm text-green-600"
+            *ngIf="p.currentPrice < p.lastPrice"
+            >↓ {{ p.lastPrice - p.currentPrice | currency: "EUR" }}</span
+          >
+        </li>
+      }
+    </ul>
+  </div>
+
+  <div class="bg-white rounded-lg shadow p-6">
+    <h2 class="text-xl font-bold mb-4 text-blue-700">
+      Recomendaciones para ti
+    </h2>
+    <ul>
+      <li class="mb-2">
+        ¿Sabías que puedes ahorrar más siguiendo productos favoritos?
+      </li>
+      <li class="mb-2">
+        ¡Activa alertas para recibir notificaciones de bajadas de precio!
+      </li>
+      <li class="mb-2">
+        Explora nuevas categorías para descubrir mejores ofertas.
+      </li>
+    </ul>
+  </div>
+</div>

@@ -1,11 +1,12 @@
 import { Component, inject, Input } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-topbar',
   standalone: true,
   templateUrl: './topbar.component.html',
   styleUrl: './topbar.component.scss',
+  imports: [RouterLink],
 })
 export class TopbarComponent {
   @Input() username!: string;
