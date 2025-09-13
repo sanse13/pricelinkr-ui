@@ -1,22 +1,13 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MockBuilder, MockRender } from 'ng-mocks';
 import { ComparedProductItemComponent } from './compared-product-item.component';
 
 describe('ComparedProductItemComponent', () => {
-  let component: ComparedProductItemComponent;
-  let fixture: ComponentFixture<ComparedProductItemComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [ComparedProductItemComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(ComparedProductItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  beforeEach(() => MockBuilder(ComparedProductItemComponent));
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = MockRender(ComparedProductItemComponent, {
+      product: { name: 'Test', prices: [], minPrice: 0 },
+    });
+    expect(fixture.point.componentInstance).toBeTruthy();
   });
 });

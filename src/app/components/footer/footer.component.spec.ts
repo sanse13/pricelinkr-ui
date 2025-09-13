@@ -1,22 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MockBuilder, MockRender } from 'ng-mocks';
 import { FooterComponent } from './footer.component';
 
 describe('FooterComponent', () => {
-  let component: FooterComponent;
-  let fixture: ComponentFixture<FooterComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [FooterComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(FooterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  beforeEach(() => MockBuilder(FooterComponent));
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = MockRender(FooterComponent);
+    expect(fixture.point.componentInstance).toBeTruthy();
   });
 });

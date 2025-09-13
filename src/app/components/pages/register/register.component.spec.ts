@@ -1,22 +1,11 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MockBuilder, MockRender } from 'ng-mocks';
 import { RegisterComponent } from './register.component';
 
 describe('RegisterComponent', () => {
-  let component: RegisterComponent;
-  let fixture: ComponentFixture<RegisterComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [RegisterComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(RegisterComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  beforeEach(() => MockBuilder(RegisterComponent));
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    const fixture = MockRender(RegisterComponent);
+    expect(fixture.point.componentInstance).toBeTruthy();
   });
 });

@@ -3,7 +3,11 @@
     class="bg-white rounded-3xl shadow-xl border border-blue-100 p-6 w-96 flex flex-col gap-4 transition-all duration-200 hover:scale-[1.035] hover:shadow-2xl hover:border-blue-200 group"
   >
     <!-- Nombre del producto -->
-    <h3 class="font-extrabold text-xl text-blue-700 text-center mb-2 tracking-tight">{{ product.name }}</h3>
+    <h3
+      class="font-extrabold text-xl text-blue-700 text-center mb-2 tracking-tight"
+    >
+      {{ product.name }}
+    </h3>
     <!-- Tabla de precios -->
     <table class="w-full text-left mb-2 border-separate border-spacing-y-1">
       <thead>
@@ -14,12 +18,17 @@
       </thead>
       <tbody>
         @for (price of product.prices; track price.store) {
-          <tr class="rounded-lg overflow-hidden @if (price.price === product.minPrice) { bg-blue-50 } else { bg-gray-50 }">
+          <tr
+            class="rounded-lg overflow-hidden @if (price.price === product.minPrice) { bg-blue-50 } else { bg-gray-50 }"
+          >
             <td class="py-1 px-2 rounded-l-lg">{{ price.store }}</td>
             <td class="py-1 px-2 font-semibold rounded-r-lg">
               {{ price.price | currency: "EUR" }}
               @if (price.price === product.minPrice) {
-                <span class="ml-2 inline-block bg-gradient-to-tr from-blue-500 to-teal-400 text-white text-xs px-2 py-0.5 rounded-full font-bold align-middle shadow">Mejor</span>
+                <span
+                  class="ml-2 inline-block bg-gradient-to-tr from-blue-500 to-teal-400 text-white text-xs px-2 py-0.5 rounded-full font-bold align-middle shadow"
+                  >Mejor</span
+                >
               }
             </td>
           </tr>
@@ -28,8 +37,13 @@
     </table>
     <!-- Mejor precio destacado -->
     <div class="flex items-center justify-center gap-2 mt-2">
-      <span class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-semibold">Mejor precio</span>
-      <span class="font-bold text-lg text-blue-600 tracking-tight">{{ product.minPrice | currency: "EUR" }}</span>
+      <span
+        class="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full font-semibold"
+        >Mejor precio</span
+      >
+      <span class="font-bold text-lg text-blue-600 tracking-tight">{{
+        product.minPrice | currency: "EUR"
+      }}</span>
     </div>
   </div>
 }

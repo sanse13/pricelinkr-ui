@@ -18,7 +18,6 @@ export class AppComponent {
 
   constructor(private theme: ThemeService) {
     this.isDarkMode = this.theme.isDarkMode();
-    // Simulación: comprobar si hay usuario en localStorage
     const user = localStorage.getItem('pricelinkr-user');
     if (user) {
       this.username = user;

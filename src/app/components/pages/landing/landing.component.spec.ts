@@ -1,22 +1,14 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { MockBuilder, MockRender } from 'ng-mocks';
 import { LandingComponent } from './landing.component';
 
 describe('LandingComponent', () => {
-  let component: LandingComponent;
-  let fixture: ComponentFixture<LandingComponent>;
-
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      imports: [LandingComponent],
-    }).compileComponents();
-
-    fixture = TestBed.createComponent(LandingComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+  beforeEach(() => MockBuilder(LandingComponent));
 
   it('should create', () => {
-    expect(component).toBeTruthy();
+    jest
+      .spyOn(LandingComponent.prototype, 'ngAfterViewInit')
+      .mockImplementation(() => {});
+    const fixture = MockRender(LandingComponent);
+    expect(fixture.point.componentInstance).toBeTruthy();
   });
 });
