@@ -12,65 +12,524 @@
     { "id": 10, "name": "Music" }
   ],
   "products": [
-    { "id": 101, "name": "Smartphone X", "categoryId": 1, "prices": [ { "store": "Amazon", "price": 699 }, { "store": "eBay", "price": 670 }, { "store": "BestBuy", "price": 710 } ] },
-    { "id": 102, "name": "Laptop Pro", "categoryId": 1, "prices": [ { "store": "Amazon", "price": 1200 }, { "store": "eBay", "price": 1150 }, { "store": "BestBuy", "price": 1250 } ] },
-    { "id": 103, "name": "Tablet S10", "categoryId": 1, "prices": [ { "store": "Amazon", "price": 400 }, { "store": "eBay", "price": 390 }, { "store": "MediaMarkt", "price": 410 } ] },
-    { "id": 104, "name": "Wireless Headphones", "categoryId": 1, "prices": [ { "store": "Amazon", "price": 150 }, { "store": "eBay", "price": 140 }, { "store": "BestBuy", "price": 155 } ] },
-    { "id": 105, "name": "Smartwatch Z", "categoryId": 1, "prices": [ { "store": "Amazon", "price": 220 }, { "store": "eBay", "price": 210 }, { "store": "MediaMarkt", "price": 225 } ] },
-    { "id": 106, "name": "Bluetooth Speaker", "categoryId": 1, "prices": [ { "store": "Amazon", "price": 80 }, { "store": "eBay", "price": 75 }, { "store": "BestBuy", "price": 85 } ] },
+    {
+      "id": 101,
+      "name": "Smartphone X",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 699 },
+        { "store": "eBay", "price": 670 },
+        { "store": "BestBuy", "price": 710 }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Laptop Pro",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 1200 },
+        { "store": "eBay", "price": 1150 },
+        { "store": "BestBuy", "price": 1250 }
+      ]
+    },
+    {
+      "id": 103,
+      "name": "Tablet S10",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 400 },
+        { "store": "eBay", "price": 390 },
+        { "store": "MediaMarkt", "price": 410 }
+      ]
+    },
+    {
+      "id": 104,
+      "name": "Wireless Headphones",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 150 },
+        { "store": "eBay", "price": 140 },
+        { "store": "BestBuy", "price": 155 }
+      ]
+    },
+    {
+      "id": 105,
+      "name": "Smartwatch Z",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 220 },
+        { "store": "eBay", "price": 210 },
+        { "store": "MediaMarkt", "price": 225 }
+      ]
+    },
+    {
+      "id": 106,
+      "name": "Bluetooth Speaker",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 80 },
+        { "store": "eBay", "price": 75 },
+        { "store": "BestBuy", "price": 85 }
+      ]
+    },
 
-    { "id": 201, "name": "Bestseller Book", "categoryId": 2, "prices": [ { "store": "Amazon", "price": 20 }, { "store": "eBay", "price": 18 }, { "store": "BookDepository", "price": 19 } ] },
-    { "id": 202, "name": "Cookbook Deluxe", "categoryId": 2, "prices": [ { "store": "Amazon", "price": 35 }, { "store": "BookDepository", "price": 32 }, { "store": "Fnac", "price": 34 } ] },
-    { "id": 203, "name": "Science Fiction Saga", "categoryId": 2, "prices": [ { "store": "Amazon", "price": 28 }, { "store": "eBay", "price": 26 }, { "store": "Fnac", "price": 27 } ] },
-    { "id": 204, "name": "Children's Stories", "categoryId": 2, "prices": [ { "store": "Amazon", "price": 15 }, { "store": "BookDepository", "price": 14 }, { "store": "Fnac", "price": 16 } ] },
-    { "id": 205, "name": "History Encyclopedia", "categoryId": 2, "prices": [ { "store": "Amazon", "price": 50 }, { "store": "BookDepository", "price": 48 }, { "store": "Fnac", "price": 49 } ] },
+    {
+      "id": 201,
+      "name": "Bestseller Book",
+      "categoryId": 2,
+      "prices": [
+        { "store": "Amazon", "price": 20 },
+        { "store": "eBay", "price": 18 },
+        { "store": "BookDepository", "price": 19 }
+      ]
+    },
+    {
+      "id": 202,
+      "name": "Cookbook Deluxe",
+      "categoryId": 2,
+      "prices": [
+        { "store": "Amazon", "price": 35 },
+        { "store": "BookDepository", "price": 32 },
+        { "store": "Fnac", "price": 34 }
+      ]
+    },
+    {
+      "id": 203,
+      "name": "Science Fiction Saga",
+      "categoryId": 2,
+      "prices": [
+        { "store": "Amazon", "price": 28 },
+        { "store": "eBay", "price": 26 },
+        { "store": "Fnac", "price": 27 }
+      ]
+    },
+    {
+      "id": 204,
+      "name": "Children's Stories",
+      "categoryId": 2,
+      "prices": [
+        { "store": "Amazon", "price": 15 },
+        { "store": "BookDepository", "price": 14 },
+        { "store": "Fnac", "price": 16 }
+      ]
+    },
+    {
+      "id": 205,
+      "name": "History Encyclopedia",
+      "categoryId": 2,
+      "prices": [
+        { "store": "Amazon", "price": 50 },
+        { "store": "BookDepository", "price": 48 },
+        { "store": "Fnac", "price": 49 }
+      ]
+    },
 
-    { "id": 301, "name": "T-Shirt Basic", "categoryId": 3, "prices": [ { "store": "Amazon", "price": 15 }, { "store": "eBay", "price": 13 }, { "store": "Zara", "price": 17 } ] },
-    { "id": 302, "name": "Jeans Classic", "categoryId": 3, "prices": [ { "store": "Amazon", "price": 40 }, { "store": "Zara", "price": 38 }, { "store": "H&M", "price": 36 } ] },
-    { "id": 303, "name": "Sneakers Run", "categoryId": 3, "prices": [ { "store": "Amazon", "price": 60 }, { "store": "Zara", "price": 58 }, { "store": "Nike", "price": 65 } ] },
-    { "id": 304, "name": "Jacket Winter", "categoryId": 3, "prices": [ { "store": "Amazon", "price": 90 }, { "store": "Zara", "price": 85 }, { "store": "H&M", "price": 88 } ] },
-    { "id": 305, "name": "Socks Pack", "categoryId": 3, "prices": [ { "store": "Amazon", "price": 10 }, { "store": "Zara", "price": 9 }, { "store": "H&M", "price": 11 } ] },
+    {
+      "id": 301,
+      "name": "T-Shirt Basic",
+      "categoryId": 3,
+      "prices": [
+        { "store": "Amazon", "price": 15 },
+        { "store": "eBay", "price": 13 },
+        { "store": "Zara", "price": 17 }
+      ]
+    },
+    {
+      "id": 302,
+      "name": "Jeans Classic",
+      "categoryId": 3,
+      "prices": [
+        { "store": "Amazon", "price": 40 },
+        { "store": "Zara", "price": 38 },
+        { "store": "H&M", "price": 36 }
+      ]
+    },
+    {
+      "id": 303,
+      "name": "Sneakers Run",
+      "categoryId": 3,
+      "prices": [
+        { "store": "Amazon", "price": 60 },
+        { "store": "Zara", "price": 58 },
+        { "store": "Nike", "price": 65 }
+      ]
+    },
+    {
+      "id": 304,
+      "name": "Jacket Winter",
+      "categoryId": 3,
+      "prices": [
+        { "store": "Amazon", "price": 90 },
+        { "store": "Zara", "price": 85 },
+        { "store": "H&M", "price": 88 }
+      ]
+    },
+    {
+      "id": 305,
+      "name": "Socks Pack",
+      "categoryId": 3,
+      "prices": [
+        { "store": "Amazon", "price": 10 },
+        { "store": "Zara", "price": 9 },
+        { "store": "H&M", "price": 11 }
+      ]
+    },
 
-    { "id": 401, "name": "Blender Pro", "categoryId": 4, "prices": [ { "store": "Amazon", "price": 99 }, { "store": "Walmart", "price": 95 }, { "store": "Target", "price": 97 } ] },
-    { "id": 402, "name": "Coffee Maker", "categoryId": 4, "prices": [ { "store": "Amazon", "price": 120 }, { "store": "Walmart", "price": 110 }, { "store": "Target", "price": 115 } ] },
-    { "id": 403, "name": "Toaster XL", "categoryId": 4, "prices": [ { "store": "Amazon", "price": 45 }, { "store": "Walmart", "price": 42 }, { "store": "Target", "price": 44 } ] },
-    { "id": 404, "name": "Air Fryer", "categoryId": 4, "prices": [ { "store": "Amazon", "price": 130 }, { "store": "Walmart", "price": 125 }, { "store": "Target", "price": 128 } ] },
-    { "id": 405, "name": "Rice Cooker", "categoryId": 4, "prices": [ { "store": "Amazon", "price": 60 }, { "store": "Walmart", "price": 58 }, { "store": "Target", "price": 59 } ] },
+    {
+      "id": 401,
+      "name": "Blender Pro",
+      "categoryId": 4,
+      "prices": [
+        { "store": "Amazon", "price": 99 },
+        { "store": "Walmart", "price": 95 },
+        { "store": "Target", "price": 97 }
+      ]
+    },
+    {
+      "id": 402,
+      "name": "Coffee Maker",
+      "categoryId": 4,
+      "prices": [
+        { "store": "Amazon", "price": 120 },
+        { "store": "Walmart", "price": 110 },
+        { "store": "Target", "price": 115 }
+      ]
+    },
+    {
+      "id": 403,
+      "name": "Toaster XL",
+      "categoryId": 4,
+      "prices": [
+        { "store": "Amazon", "price": 45 },
+        { "store": "Walmart", "price": 42 },
+        { "store": "Target", "price": 44 }
+      ]
+    },
+    {
+      "id": 404,
+      "name": "Air Fryer",
+      "categoryId": 4,
+      "prices": [
+        { "store": "Amazon", "price": 130 },
+        { "store": "Walmart", "price": 125 },
+        { "store": "Target", "price": 128 }
+      ]
+    },
+    {
+      "id": 405,
+      "name": "Rice Cooker",
+      "categoryId": 4,
+      "prices": [
+        { "store": "Amazon", "price": 60 },
+        { "store": "Walmart", "price": 58 },
+        { "store": "Target", "price": 59 }
+      ]
+    },
 
-    { "id": 501, "name": "Board Game Fun", "categoryId": 5, "prices": [ { "store": "Amazon", "price": 30 }, { "store": "ToysRUs", "price": 28 }, { "store": "Walmart", "price": 29 } ] },
-    { "id": 502, "name": "Puzzle 1000pcs", "categoryId": 5, "prices": [ { "store": "Amazon", "price": 18 }, { "store": "ToysRUs", "price": 17 }, { "store": "Walmart", "price": 19 } ] },
-    { "id": 503, "name": "Remote Car", "categoryId": 5, "prices": [ { "store": "Amazon", "price": 45 }, { "store": "ToysRUs", "price": 43 }, { "store": "Walmart", "price": 44 } ] },
-    { "id": 504, "name": "Doll House", "categoryId": 5, "prices": [ { "store": "Amazon", "price": 60 }, { "store": "ToysRUs", "price": 58 }, { "store": "Walmart", "price": 59 } ] },
-    { "id": 505, "name": "Action Figure", "categoryId": 5, "prices": [ { "store": "Amazon", "price": 25 }, { "store": "ToysRUs", "price": 24 }, { "store": "Walmart", "price": 26 } ] },
+    {
+      "id": 501,
+      "name": "Board Game Fun",
+      "categoryId": 5,
+      "prices": [
+        { "store": "Amazon", "price": 30 },
+        { "store": "ToysRUs", "price": 28 },
+        { "store": "Walmart", "price": 29 }
+      ]
+    },
+    {
+      "id": 502,
+      "name": "Puzzle 1000pcs",
+      "categoryId": 5,
+      "prices": [
+        { "store": "Amazon", "price": 18 },
+        { "store": "ToysRUs", "price": 17 },
+        { "store": "Walmart", "price": 19 }
+      ]
+    },
+    {
+      "id": 503,
+      "name": "Remote Car",
+      "categoryId": 5,
+      "prices": [
+        { "store": "Amazon", "price": 45 },
+        { "store": "ToysRUs", "price": 43 },
+        { "store": "Walmart", "price": 44 }
+      ]
+    },
+    {
+      "id": 504,
+      "name": "Doll House",
+      "categoryId": 5,
+      "prices": [
+        { "store": "Amazon", "price": 60 },
+        { "store": "ToysRUs", "price": 58 },
+        { "store": "Walmart", "price": 59 }
+      ]
+    },
+    {
+      "id": 505,
+      "name": "Action Figure",
+      "categoryId": 5,
+      "prices": [
+        { "store": "Amazon", "price": 25 },
+        { "store": "ToysRUs", "price": 24 },
+        { "store": "Walmart", "price": 26 }
+      ]
+    },
 
-    { "id": 601, "name": "Football Ball", "categoryId": 6, "prices": [ { "store": "Decathlon", "price": 25 }, { "store": "Amazon", "price": 27 }, { "store": "Walmart", "price": 26 } ] },
-    { "id": 602, "name": "Tennis Racket", "categoryId": 6, "prices": [ { "store": "Decathlon", "price": 60 }, { "store": "Amazon", "price": 62 }, { "store": "Walmart", "price": 61 } ] },
-    { "id": 603, "name": "Yoga Mat", "categoryId": 6, "prices": [ { "store": "Decathlon", "price": 20 }, { "store": "Amazon", "price": 22 }, { "store": "Walmart", "price": 21 } ] },
-    { "id": 604, "name": "Basketball", "categoryId": 6, "prices": [ { "store": "Decathlon", "price": 30 }, { "store": "Amazon", "price": 32 }, { "store": "Walmart", "price": 31 } ] },
-    { "id": 605, "name": "Swim Goggles", "categoryId": 6, "prices": [ { "store": "Decathlon", "price": 15 }, { "store": "Amazon", "price": 16 }, { "store": "Walmart", "price": 15 } ] },
+    {
+      "id": 601,
+      "name": "Football Ball",
+      "categoryId": 6,
+      "prices": [
+        { "store": "Decathlon", "price": 25 },
+        { "store": "Amazon", "price": 27 },
+        { "store": "Walmart", "price": 26 }
+      ]
+    },
+    {
+      "id": 602,
+      "name": "Tennis Racket",
+      "categoryId": 6,
+      "prices": [
+        { "store": "Decathlon", "price": 60 },
+        { "store": "Amazon", "price": 62 },
+        { "store": "Walmart", "price": 61 }
+      ]
+    },
+    {
+      "id": 603,
+      "name": "Yoga Mat",
+      "categoryId": 6,
+      "prices": [
+        { "store": "Decathlon", "price": 20 },
+        { "store": "Amazon", "price": 22 },
+        { "store": "Walmart", "price": 21 }
+      ]
+    },
+    {
+      "id": 604,
+      "name": "Basketball",
+      "categoryId": 6,
+      "prices": [
+        { "store": "Decathlon", "price": 30 },
+        { "store": "Amazon", "price": 32 },
+        { "store": "Walmart", "price": 31 }
+      ]
+    },
+    {
+      "id": 605,
+      "name": "Swim Goggles",
+      "categoryId": 6,
+      "prices": [
+        { "store": "Decathlon", "price": 15 },
+        { "store": "Amazon", "price": 16 },
+        { "store": "Walmart", "price": 15 }
+      ]
+    },
 
-    { "id": 701, "name": "Face Cream", "categoryId": 7, "prices": [ { "store": "Sephora", "price": 50 }, { "store": "Amazon", "price": 48 }, { "store": "Douglas", "price": 49 } ] },
-    { "id": 702, "name": "Perfume Classic", "categoryId": 7, "prices": [ { "store": "Sephora", "price": 80 }, { "store": "Amazon", "price": 78 }, { "store": "Douglas", "price": 79 } ] },
-    { "id": 703, "name": "Lipstick Red", "categoryId": 7, "prices": [ { "store": "Sephora", "price": 25 }, { "store": "Amazon", "price": 24 }, { "store": "Douglas", "price": 26 } ] },
-    { "id": 704, "name": "Shampoo Deluxe", "categoryId": 7, "prices": [ { "store": "Sephora", "price": 18 }, { "store": "Amazon", "price": 17 }, { "store": "Douglas", "price": 19 } ] },
-    { "id": 705, "name": "Body Lotion", "categoryId": 7, "prices": [ { "store": "Sephora", "price": 22 }, { "store": "Amazon", "price": 21 }, { "store": "Douglas", "price": 23 } ] },
+    {
+      "id": 701,
+      "name": "Face Cream",
+      "categoryId": 7,
+      "prices": [
+        { "store": "Sephora", "price": 50 },
+        { "store": "Amazon", "price": 48 },
+        { "store": "Douglas", "price": 49 }
+      ]
+    },
+    {
+      "id": 702,
+      "name": "Perfume Classic",
+      "categoryId": 7,
+      "prices": [
+        { "store": "Sephora", "price": 80 },
+        { "store": "Amazon", "price": 78 },
+        { "store": "Douglas", "price": 79 }
+      ]
+    },
+    {
+      "id": 703,
+      "name": "Lipstick Red",
+      "categoryId": 7,
+      "prices": [
+        { "store": "Sephora", "price": 25 },
+        { "store": "Amazon", "price": 24 },
+        { "store": "Douglas", "price": 26 }
+      ]
+    },
+    {
+      "id": 704,
+      "name": "Shampoo Deluxe",
+      "categoryId": 7,
+      "prices": [
+        { "store": "Sephora", "price": 18 },
+        { "store": "Amazon", "price": 17 },
+        { "store": "Douglas", "price": 19 }
+      ]
+    },
+    {
+      "id": 705,
+      "name": "Body Lotion",
+      "categoryId": 7,
+      "prices": [
+        { "store": "Sephora", "price": 22 },
+        { "store": "Amazon", "price": 21 },
+        { "store": "Douglas", "price": 23 }
+      ]
+    },
 
-    { "id": 801, "name": "Car Vacuum Cleaner", "categoryId": 8, "prices": [ { "store": "Amazon", "price": 60 }, { "store": "AutoZone", "price": 58 }, { "store": "Walmart", "price": 59 } ] },
-    { "id": 802, "name": "Car Wax", "categoryId": 8, "prices": [ { "store": "Amazon", "price": 20 }, { "store": "AutoZone", "price": 19 }, { "store": "Walmart", "price": 21 } ] },
-    { "id": 803, "name": "Tire Inflator", "categoryId": 8, "prices": [ { "store": "Amazon", "price": 35 }, { "store": "AutoZone", "price": 33 }, { "store": "Walmart", "price": 34 } ] },
-    { "id": 804, "name": "Car Cover", "categoryId": 8, "prices": [ { "store": "Amazon", "price": 45 }, { "store": "AutoZone", "price": 43 }, { "store": "Walmart", "price": 44 } ] },
-    { "id": 805, "name": "Air Freshener", "categoryId": 8, "prices": [ { "store": "Amazon", "price": 8 }, { "store": "AutoZone", "price": 7 }, { "store": "Walmart", "price": 9 } ] },
+    {
+      "id": 801,
+      "name": "Car Vacuum Cleaner",
+      "categoryId": 8,
+      "prices": [
+        { "store": "Amazon", "price": 60 },
+        { "store": "AutoZone", "price": 58 },
+        { "store": "Walmart", "price": 59 }
+      ]
+    },
+    {
+      "id": 802,
+      "name": "Car Wax",
+      "categoryId": 8,
+      "prices": [
+        { "store": "Amazon", "price": 20 },
+        { "store": "AutoZone", "price": 19 },
+        { "store": "Walmart", "price": 21 }
+      ]
+    },
+    {
+      "id": 803,
+      "name": "Tire Inflator",
+      "categoryId": 8,
+      "prices": [
+        { "store": "Amazon", "price": 35 },
+        { "store": "AutoZone", "price": 33 },
+        { "store": "Walmart", "price": 34 }
+      ]
+    },
+    {
+      "id": 804,
+      "name": "Car Cover",
+      "categoryId": 8,
+      "prices": [
+        { "store": "Amazon", "price": 45 },
+        { "store": "AutoZone", "price": 43 },
+        { "store": "Walmart", "price": 44 }
+      ]
+    },
+    {
+      "id": 805,
+      "name": "Air Freshener",
+      "categoryId": 8,
+      "prices": [
+        { "store": "Amazon", "price": 8 },
+        { "store": "AutoZone", "price": 7 },
+        { "store": "Walmart", "price": 9 }
+      ]
+    },
 
-    { "id": 901, "name": "Garden Hose", "categoryId": 9, "prices": [ { "store": "Amazon", "price": 25 }, { "store": "LeroyMerlin", "price": 23 }, { "store": "Walmart", "price": 24 } ] },
-    { "id": 902, "name": "Lawn Mower", "categoryId": 9, "prices": [ { "store": "Amazon", "price": 200 }, { "store": "LeroyMerlin", "price": 195 }, { "store": "Walmart", "price": 198 } ] },
-    { "id": 903, "name": "Garden Shears", "categoryId": 9, "prices": [ { "store": "Amazon", "price": 18 }, { "store": "LeroyMerlin", "price": 17 }, { "store": "Walmart", "price": 19 } ] },
-    { "id": 904, "name": "Plant Pots Set", "categoryId": 9, "prices": [ { "store": "Amazon", "price": 30 }, { "store": "LeroyMerlin", "price": 28 }, { "store": "Walmart", "price": 29 } ] },
-    { "id": 905, "name": "Compost Bin", "categoryId": 9, "prices": [ { "store": "Amazon", "price": 55 }, { "store": "LeroyMerlin", "price": 53 }, { "store": "Walmart", "price": 54 } ] },
+    {
+      "id": 901,
+      "name": "Garden Hose",
+      "categoryId": 9,
+      "prices": [
+        { "store": "Amazon", "price": 25 },
+        { "store": "LeroyMerlin", "price": 23 },
+        { "store": "Walmart", "price": 24 }
+      ]
+    },
+    {
+      "id": 902,
+      "name": "Lawn Mower",
+      "categoryId": 9,
+      "prices": [
+        { "store": "Amazon", "price": 200 },
+        { "store": "LeroyMerlin", "price": 195 },
+        { "store": "Walmart", "price": 198 }
+      ]
+    },
+    {
+      "id": 903,
+      "name": "Garden Shears",
+      "categoryId": 9,
+      "prices": [
+        { "store": "Amazon", "price": 18 },
+        { "store": "LeroyMerlin", "price": 17 },
+        { "store": "Walmart", "price": 19 }
+      ]
+    },
+    {
+      "id": 904,
+      "name": "Plant Pots Set",
+      "categoryId": 9,
+      "prices": [
+        { "store": "Amazon", "price": 30 },
+        { "store": "LeroyMerlin", "price": 28 },
+        { "store": "Walmart", "price": 29 }
+      ]
+    },
+    {
+      "id": 905,
+      "name": "Compost Bin",
+      "categoryId": 9,
+      "prices": [
+        { "store": "Amazon", "price": 55 },
+        { "store": "LeroyMerlin", "price": 53 },
+        { "store": "Walmart", "price": 54 }
+      ]
+    },
 
-    { "id": 1001, "name": "Acoustic Guitar", "categoryId": 10, "prices": [ { "store": "Amazon", "price": 150 }, { "store": "Thomann", "price": 140 }, { "store": "eBay", "price": 145 } ] },
-    { "id": 1002, "name": "Electric Keyboard", "categoryId": 10, "prices": [ { "store": "Amazon", "price": 200 }, { "store": "Thomann", "price": 190 }, { "store": "eBay", "price": 195 } ] },
-    { "id": 1003, "name": "Drum Set", "categoryId": 10, "prices": [ { "store": "Amazon", "price": 350 }, { "store": "Thomann", "price": 340 }, { "store": "eBay", "price": 345 } ] },
-    { "id": 1004, "name": "Violin Student", "categoryId": 10, "prices": [ { "store": "Amazon", "price": 120 }, { "store": "Thomann", "price": 115 }, { "store": "eBay", "price": 118 } ] },
-    { "id": 1005, "name": "Microphone Pro", "categoryId": 10, "prices": [ { "store": "Amazon", "price": 80 }, { "store": "Thomann", "price": 78 }, { "store": "eBay", "price": 79 } ] }
+    {
+      "id": 1001,
+      "name": "Acoustic Guitar",
+      "categoryId": 10,
+      "prices": [
+        { "store": "Amazon", "price": 150 },
+        { "store": "Thomann", "price": 140 },
+        { "store": "eBay", "price": 145 }
+      ]
+    },
+    {
+      "id": 1002,
+      "name": "Electric Keyboard",
+      "categoryId": 10,
+      "prices": [
+        { "store": "Amazon", "price": 200 },
+        { "store": "Thomann", "price": 190 },
+        { "store": "eBay", "price": 195 }
+      ]
+    },
+    {
+      "id": 1003,
+      "name": "Drum Set",
+      "categoryId": 10,
+      "prices": [
+        { "store": "Amazon", "price": 350 },
+        { "store": "Thomann", "price": 340 },
+        { "store": "eBay", "price": 345 }
+      ]
+    },
+    {
+      "id": 1004,
+      "name": "Violin Student",
+      "categoryId": 10,
+      "prices": [
+        { "store": "Amazon", "price": 120 },
+        { "store": "Thomann", "price": 115 },
+        { "store": "eBay", "price": 118 }
+      ]
+    },
+    {
+      "id": 1005,
+      "name": "Microphone Pro",
+      "categoryId": 10,
+      "prices": [
+        { "store": "Amazon", "price": 80 },
+        { "store": "Thomann", "price": 78 },
+        { "store": "eBay", "price": 79 }
+      ]
+    }
   ]
 }

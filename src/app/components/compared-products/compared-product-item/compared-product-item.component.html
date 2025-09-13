@@ -1,0 +1,29 @@
+@if (product(); as product) {
+  <div class="bg-white rounded-lg shadow p-6 w-72 transition-transform duration-200 hover:scale-105">
+              <h3 class="font-semibold text-lg mb-2">{{ product.name }}</h3>
+              <table class="w-full text-left mb-2">
+                <thead>
+                  <tr>
+                    <th class="py-1">Tienda</th>
+                    <th class="py-1">Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (price of product.prices; track price.store) {
+                    <tr>
+                      <td class="py-1">{{ price.store }}</td>
+                      <td class="py-1 font-semibold">
+                        {{ price.price | currency: "EUR" }}
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+              <div class="text-sm text-gray-500">
+                Mejor precio:
+                <span class="font-bold text-blue-600">{{
+                  product.minPrice | currency: "EUR"
+                }}</span>
+              </div>
+            </div>
+}

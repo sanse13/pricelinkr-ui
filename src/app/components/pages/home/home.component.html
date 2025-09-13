@@ -1,5 +1,5 @@
 <!-- Hero Section -->
-<section class="py-16 mb-12">
+<section class="py-4">
   <div class="container mx-auto px-4 flex flex-col items-center text-center">
     <h1 class="text-4xl md:text-5xl font-bold mb-4">
       Encuentra el <span class="text-blue-500">mejor precio</span> en segundos
@@ -8,16 +8,37 @@
       Filtra por <strong>categoría</strong>, compara precios y ahorra en tus
       compras online. ¡Rápido, fácil y gratis!
     </p>
-    <div class="flex flex-col md:flex-row gap-4 w-full max-w-md mx-auto">
-      <select
-        [formControl]="selectedCategory"
-        name="categories"
-        class="flex-1 rounded border px-4 py-2"
-      >
-        @for (category of categories; track $index) {
-          <option [value]="category.id">{{ category.name }}</option>
-        }
-      </select>
+    <div
+      class="flex flex-col md:flex-row gap-4 w-full max-w-2/3 mx-auto justify-center"
+    >
+      <div class="relative w-54">
+        <select
+          [formControl]="selectedCategory"
+          name="categories"
+          class="block w-full appearance-none rounded-lg border border-blue-200 bg-white px-4 py-3 pr-10 text-gray-700 shadow-sm focus:border-blue-400 focus:ring-2 focus:ring-blue-200 transition"
+        >
+          @for (category of categories; track $index) {
+            <option [value]="category.id">{{ category.name }}</option>
+          }
+        </select>
+        <span
+          class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-blue-400"
+        >
+          <svg
+            class="h-5 w-5"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M19 9l-7 7-7-7"
+            />
+          </svg>
+        </span>
+      </div>
       <button
         type="button"
         class="pricelinkr-button px-6 py-2 text-lg"
@@ -25,45 +46,26 @@
       >
         Comparar precios
       </button>
+      <button
+        type="button"
+        class="pricelinkr-button px-6 py-2 text-lg"
+        (click)="clearFilter()"
+      >
+        Limpiar filtro
+      </button>
     </div>
 
-    <!-- Resultados de comparación de precios -->
     @if (comparedProducts.length > 0) {
-      <section class="container mx-auto px-4 py-8">
+      <section class="container mx-auto p-4">
         <h2 class="text-2xl font-bold mb-6 text-center">
           Resultados de comparación
         </h2>
         <div class="flex flex-wrap justify-center gap-8">
           @for (product of comparedProducts; track product.id) {
-            <div class="bg-white rounded-lg shadow p-6 w-full max-w-md">
-              <h3 class="font-semibold text-lg mb-2">{{ product.name }}</h3>
-              <table class="w-full text-left mb-2">
-                <thead>
-                  <tr>
-                    <th class="py-1">Tienda</th>
-                    <th class="py-1">Precio</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  @for (price of product.prices; track price.store) {
-                    <tr>
-                      <td class="py-1">{{ price.store }}</td>
-                      <td class="py-1 font-semibold">
-                        {{ price.price | currency: "EUR" }}
-                      </td>
-                    </tr>
-                  }
-                </tbody>
-              </table>
-              <div class="text-sm text-gray-500">
-                Mejor precio:
-                <span class="font-bold text-blue-600">{{
-                  product.minPrice | currency: "EUR"
-                }}</span>
-              </div>
-            </div>
+            <app-compared-product-item [product]="product" />
           }
         </div>
+        <hr class="mt-8 border-t-2 border-blue-200 rounded-full opacity-60" />
       </section>
     }
   </div>
@@ -97,7 +99,9 @@
 </section>
 
 <!-- Call to Action Section -->
-<section class="rounded-lg py-12 mt-12 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400">
+<section
+  class="rounded-lg py-12 mt-12 bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400"
+>
   <div class="container mx-auto px-4 text-center text-white">
     <h2 class="text-2xl md:text-3xl font-bold mb-4">¿Listo para ahorrar?</h2>
     <p class="mb-6">

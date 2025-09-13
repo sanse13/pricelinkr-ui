@@ -1,7 +1,7 @@
-import { CurrencyPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import data from '../../../../../fake-data.json';
+import { ComparedProductItemComponent } from '../../compared-products/compared-product-item/compared-product-item.component';
 
 interface Category {
   id: number;
@@ -13,7 +13,7 @@ interface ProductPrice {
   price: number;
 }
 
-interface Product {
+export interface Product {
   id: number;
   name: string;
   categoryId: number;
@@ -23,7 +23,7 @@ interface Product {
 
 @Component({
   selector: 'app-home',
-  imports: [FormsModule, CurrencyPipe, ReactiveFormsModule],
+  imports: [FormsModule, ReactiveFormsModule, ComparedProductItemComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -50,5 +50,9 @@ export class HomeComponent {
           minPrice: Math.min(...product.prices.map((pr) => pr.price)),
         }));
     }
+  }
+
+  clearFilter(): void {
+    this.comparedProducts = [];
   }
 }
