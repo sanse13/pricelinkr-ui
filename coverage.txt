@@ -1,0 +1,28 @@
+--------------------------------------------------------|---------|----------|---------|---------|-------------------
+File                                                    | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+--------------------------------------------------------|---------|----------|---------|---------|-------------------
+All files                                               |   84.15 |    45.45 |   57.89 |   82.95 |                   
+ app                                                    |     100 |      100 |     100 |     100 |                   
+  app.component.html                                    |     100 |      100 |     100 |     100 |                   
+  app.component.ts                                      |     100 |      100 |     100 |     100 |                   
+ app/components/compared-products/compared-product-item |     100 |      100 |     100 |     100 |                   
+  compared-product-item.component.html                  |     100 |      100 |     100 |     100 |                   
+  compared-product-item.component.ts                    |     100 |      100 |     100 |     100 |                   
+ app/components/footer                                  |     100 |      100 |     100 |     100 |                   
+  footer.component.html                                 |     100 |      100 |     100 |     100 |                   
+  footer.component.ts                                   |     100 |      100 |     100 |     100 |                   
+ app/components/pages/home                              |     100 |       50 |     100 |     100 |                   
+  home.component.html                                   |     100 |      100 |     100 |     100 |                   
+  home.component.ts                                     |     100 |       50 |     100 |     100 | 45                
+ app/components/pages/landing                           |      85 |      100 |   66.66 |   82.35 |                   
+  landing.component.html                                |     100 |      100 |     100 |     100 |                   
+  landing.component.ts                                  |   84.21 |      100 |   66.66 |   81.25 | 41-43             
+ app/components/pages/register                          |      60 |      100 |   33.33 |    62.5 |                   
+  register.component.html                               |     100 |      100 |     100 |     100 |                   
+  register.component.ts                                 |   55.55 |      100 |   33.33 |   57.14 | 14-17             
+ app/components/topbar                                  |   85.71 |      100 |       0 |   83.33 |                   
+  topbar.component.html                                 |     100 |      100 |     100 |     100 |                   
+  topbar.component.ts                                   |   83.33 |      100 |       0 |      80 | 16                
+ app/services                                           |   33.33 |        0 |       0 |      20 |                   
+  theme.service.ts                                      |   33.33 |        0 |       0 |      20 | 5-29              
+--------------------------------------------------------|---------|----------|---------|---------|-------------------
