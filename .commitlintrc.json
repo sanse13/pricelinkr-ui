@@ -1,0 +1,5 @@
+{
+  "extends": ["@commitlint/config-conventional"],
+  "rules": {},
+  "helpUrl": "https://www.conventionalcommits.org/es/v1.0.0/#ejemplos-de-commits"
+}
