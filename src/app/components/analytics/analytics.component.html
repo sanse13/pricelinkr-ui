@@ -3,28 +3,25 @@
 
   <div class="bg-white rounded-lg shadow p-6 mb-8">
     <h2 class="text-lg font-semibold mb-4">Ahorro mensual estimado</h2>
-    <div class="flex items-end gap-4 h-40">
-      @for (m of monthlySavings; track m.month) {
-        <div class="flex flex-col items-center justify-end h-full">
-          <div class="bg-blue-400 rounded-t w-8" [style.height.%]="m.value * 2">
-            <span class="block text-xs text-white font-bold mt-1">{{ m.value }}€</span>
-          </div>
-          <span class="text-xs text-gray-500 mt-2">{{ m.month }}</span>
-        </div>
-      }
-    </div>
+    <apx-chart
+      [series]="barChartSeries"
+      [chart]="barChartOptions.chart"
+      [xaxis]="barChartOptions.xaxis"
+      [dataLabels]="barChartOptions.dataLabels"
+      [title]="barChartOptions.title"
+      [plotOptions]="barChartOptions.plotOptions"
+    ></apx-chart>
   </div>
 
   <div class="bg-white rounded-lg shadow p-6 mb-8">
     <h2 class="text-lg font-semibold mb-4">Categorías más comparadas</h2>
-    <ul>
-      @for (cat of mostComparedCategories; track cat.name) {
-        <li class="flex justify-between py-2 border-b last:border-b-0">
-          <span>{{ cat.name }}</span>
-          <span class="font-semibold text-blue-600">{{ cat.count }}</span>
-        </li>
-      }
-    </ul>
+    <apx-chart
+      [series]="pieChartSeries"
+      [chart]="pieChartOptions.chart"
+      [labels]="pieChartOptions.labels"
+      [responsive]="pieChartOptions.responsive"
+      [legend]="pieChartOptions.legend"
+    ></apx-chart>
   </div>
 
   <div class="bg-white rounded-lg shadow p-6">

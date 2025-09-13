@@ -58,11 +58,13 @@
           <span class="text-sm text-gray-500"
             >Actual: {{ p.currentPrice | currency: "EUR" }}</span
           >
-          <span
-            class="text-sm text-green-600"
-            *ngIf="p.currentPrice < p.lastPrice"
-            >↓ {{ p.lastPrice - p.currentPrice | currency: "EUR" }}</span
-          >
+          @if (p.currentPrice < p.lastPrice) {
+            <span
+              class="text-sm text-green-600"
+              >↓ {{ p.lastPrice - p.currentPrice | currency: "EUR" }}</span
+            >
+          }
+          
         </li>
       }
     </ul>
