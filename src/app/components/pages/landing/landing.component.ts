@@ -1,11 +1,4 @@
-import {
-  AfterViewInit,
-  Component,
-  ElementRef,
-  Renderer2,
-  ViewChild,
-} from '@angular/core';
-import { NgIcon, provideIcons } from '@ng-icons/core';
+import { AfterViewInit, Component } from '@angular/core';
 import {
   bootstrap1SquareFill,
   bootstrap2SquareFill,
@@ -16,6 +9,7 @@ import {
   bootstrapSearch,
   bootstrapTrophy,
 } from '@ng-icons/bootstrap-icons';
+import { NgIcon, provideIcons } from '@ng-icons/core';
 
 import { RouterLink } from '@angular/router';
 
@@ -38,43 +32,24 @@ import { RouterLink } from '@angular/router';
   ],
 })
 export class LandingComponent implements AfterViewInit {
-  @ViewChild('typeWriter') typeWriterEl!: ElementRef;
-
   typeWriterText = 'Busca un servicio B2B y compara precios al instante...';
   typeWriterSpeed = 50;
   typeWriterIndex = 0;
-
-  constructor(private renderer: Renderer2) {}
+  typeWriterDisplay = '';
 
   ngAfterViewInit(): void {
+    this.typeWriterDisplay = '';
+    this.typeWriterIndex = 0;
     this.startTypewriter();
   }
 
   private startTypewriter() {
-    if (!this.typeWriterEl) {
-      return;
+    if (this.typeWriterIndex < this.typeWriterText.length) {
+      this.typeWriterDisplay += this.typeWriterText.charAt(
+        this.typeWriterIndex,
+      );
+      this.typeWriterIndex++;
+      setTimeout(() => this.startTypewriter(), this.typeWriterSpeed);
     }
-
-    this.renderer.setProperty(
-      this.typeWriterEl.nativeElement,
-      'textContent',
-      '',
-    );
-    this.typeWriterIndex = 0;
-
-    const type = () => {
-      if (this.typeWriterIndex < this.typeWriterText.length) {
-        const char = this.typeWriterText.charAt(this.typeWriterIndex);
-        this.renderer.setProperty(
-          this.typeWriterEl.nativeElement,
-          'textContent',
-          this.typeWriterEl.nativeElement.innerText + char,
-        );
-        this.typeWriterIndex++;
-        setTimeout(type, this.typeWriterSpeed);
-      }
-    };
-
-    type();
   }
 }

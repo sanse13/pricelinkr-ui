@@ -1,175 +1,109 @@
-<div>
-  <!-- heading -->
-  <div>
-    <h1
-      class="text-blue-300 whitespace-pre font-semibold text-center"
-      id="typeWriter"
-      #typeWriter
-    >
-      Busca un servicio B2B y compara precios al instante...
-    </h1>
-  </div>
 
-  <div class="flex justify-center">
-    <hr class="border-gray-300 border-2 w-1/2 mt-4" />
-  </div>
-
-  <!--  sub heading -->
-  <div class="animate-fade-up">
-    <div>
-      <h2 class="text-center text-gray-500 mt-8">
-        <ng-icon name="bootstrapTrophy" class="text-yellow-400" /> Encuentra los
-        mejores precios para los servicios que tu empresa necesita
+<div class="min-h-screen flex flex-col items-center justify-center py-8 px-2">
+  <div class="w-full max-w-3xl bg-white/90 shadow-2xl rounded-3xl p-8 md:p-12 flex flex-col gap-8 border border-blue-100">
+    <!-- Heading principal -->
+    <div class="flex flex-col items-center gap-2">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-blue-700 text-center tracking-tight drop-shadow-sm" id="typeWriter">{{ typeWriterDisplay }}</h1>
+      <h2 class="text-lg md:text-xl text-gray-600 text-center font-medium flex items-center gap-3 mt-2">
+  <span class="flex items-center gap-2">🏆</span>
+        <span>Encuentra los mejores precios para los servicios que tu empresa necesita</span>
       </h2>
-      <div class="flex justify-center">
-        <div class="text-center text-gray-500 mt-4">
-          <p>
-            <ng-icon name="bootstrapSearch" /> Compara precios en segundos y
-            ahorra en cada decisión B2B
-          </p>
-          <p>
-            <ng-icon name="bootstrapGraphUp" /> Miles de empresas ya usan
-            PriceLinkr para tomar mejores decisiones. Únete hoy.
-          </p>
+      <div class="flex flex-col md:flex-row gap-4 justify-center mt-2">
+        <span class="inline-flex items-center gap-2 text-gray-500 text-base">
+          <span class="shrink-0 flex items-center">🔎</span>
+          <span>Compara precios en segundos y ahorra en cada decisión B2B</span>
+        </span>
+        <span class="inline-flex items-center gap-2 text-gray-500 text-base">
+          <span class="shrink-0 flex items-center">📈</span>
+          <span>Miles de empresas ya usan PriceLinkr para tomar mejores decisiones. Únete hoy.</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ¿Cómo funciona? -->
+    <div class="flex flex-col gap-6">
+      <div class="flex items-center gap-3 justify-center">
+        🚀<h3 class="text-xl font-bold text-blue-600">¿Cómo funciona?</h3>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div class="bg-blue-50 rounded-xl p-4 flex flex-col items-center shadow-sm border border-blue-100">
+          <h4 class="font-semibold text-blue-700 flex items-center gap-2 mb-2">
+            <span>Busca un servicio 🛠️</span>
+          </h4>
+          <ul class="text-gray-600 text-sm flex flex-col gap-1">
+            <li class="flex items-start gap-2">• <span>Escribe el servicio que necesitas (Ej. "Publicidad digital", "Desarrollo web", "Logística") y selecciona tu ubicación.</span></li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-4 flex flex-col items-center shadow-sm border border-blue-100">
+          <h4 class="font-semibold text-blue-700 flex items-center gap-2 mb-2">
+             <span>Compara precios y proveedores 📈</span>
+          </h4>
+          <ul class="text-gray-600 text-sm flex flex-col gap-1">
+            <li class="flex items-start gap-2">• <span>Accede a precios actualizados y revisa las valoraciones de otros negocios</span></li>
+          </ul>
+        </div>
+        <div class="bg-blue-50 rounded-xl p-4 flex flex-col items-center shadow-sm border border-blue-100">
+          <h4 class="font-semibold text-blue-700 flex items-center gap-2 mb-2">
+             <span>Elige la mejor opción para tu empresa 🤝</span>
+          </h4>
+          <ul class="text-gray-600 text-sm flex flex-col gap-1">
+            <li class="flex items-start gap-2">• <span>Contacta directamente con proveedores o guarda alertas de precios.</span></li>
+            <li class="flex items-start gap-2">• <span>Empieza gratis y optimiza tus costos ahora.</span></li>
+          </ul>
         </div>
       </div>
     </div>
 
-    <!--  how it works-->
-    <div class="mt-8 items-center">
-      <h3 class="flex justify-center">
-        <ng-icon name="bootstrapRocketTakeoffFill" />
-        ¿Cómo funciona?
-      </h3>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <h4 class="font-semibold text-gray-500 flex items-center">
-          <ng-icon name="bootstrap1SquareFill" />
-          <span class="ml-2"> Busca un servicio 🛠️ </span>
-        </h4>
-        <ul class="text-center flex flex-col items-center">
-          <li>
-            <ng-icon name="bootstrapDot" />
-            Escribe el servicio que necesitas (Ej. "Publicidad digital",
-            "Desarrollo web", "Logística") y selecciona tu ubicación.
-          </li>
-        </ul>
-      </div>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <h4 class="text-gray-500 font-semibold">
-          <ng-icon name="bootstrap2SquareFill" /> Compara precios y proveedores
-          📈
-        </h4>
-        <ul class="text-center flex flex-col items-center">
-          <li>
-            <ng-icon name="bootstrapDot" />
-
-            Accede a precios actualizados y revisa las valoraciones de otros
-            negocios
-          </li>
-        </ul>
-      </div>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <h4 class="text-gray-500 font-semibold">
-          <ng-icon name="bootstrap3 SquareFill" /> Elige la mejor opción para tu
-          empresa 🤝
-        </h4>
-        <ul class="text-center flex flex-col items-center">
-          <li>
-            <ng-icon name="bootstrapDot" />
-
-            Contacta directamente con proveedores o guarda alertas de precios.
-          </li>
-          <li>
-            <ng-icon name="bootstrapDot" /> Empieza gratis y optimiza tus costos
-            ahora.
-          </li>
-        </ul>
+    <!-- ¿Por qué usar PriceLinkr? -->
+    <div class="flex flex-col gap-4">
+      <h4 class="flex justify-center text-lg font-bold text-blue-700 items-center gap-2">🎯 ¿Por qué usar PriceLinkr?</h4>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-sm flex flex-col gap-2">
+          <span class="font-semibold text-green-600">✅ Precios actualizados en tiempo real 🔄</span>
+          <span class="text-gray-600 text-sm">Basados en fuentes de datos abiertas y análisis de mercado.</span>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-sm flex flex-col gap-2">
+          <span class="font-semibold text-blue-600">✅ Análisis de tendencias 📊</span>
+          <span class="text-gray-600 text-sm">Conoce si los precios suben o bajan en tu sector antes de contratar.</span>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-sm flex flex-col gap-2">
+          <span class="font-semibold text-indigo-600">✅ Comparación rápida y sencilla ⚡</span>
+          <span class="text-gray-600 text-sm">Olvídate de perder tiempo buscando proveedores.</span>
+        </div>
+        <div class="bg-white rounded-lg p-4 border border-blue-100 shadow-sm flex flex-col gap-2">
+          <span class="font-semibold text-teal-600">✅ Confianza y transparencia 🤝</span>
+          <span class="text-gray-600 text-sm">Opiniones y rankings de empresas reales.</span>
+        </div>
       </div>
     </div>
 
-    <!-- why costumers have to use PriceLinkr -->
-    <div class="mt-8 items-center">
-      <h4 class="flex justify-center">🎯 ¿Por qué usar PriceLinkr?</h4>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <p>✅ Precios actualizados en tiempo real 🔄</p>
-        <ul>
-          <li>Basados en fuentes de datos abiertas y análisis de mercado.</li>
-        </ul>
-      </div>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <p>✅ Análisis de tendencias 📊</p>
-        <ul>
-          <li>
-            Conoce si los precios suben o bajan en tu sector antes de contratar.
-          </li>
-        </ul>
-      </div>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <p>✅ Comparación rápida y sencilla ⚡</p>
-        <ul>
-          <li>Olvídate de perder tiempo buscando proveedores.</li>
-        </ul>
-      </div>
-
-      <div class="mt-2 flex justify-center flex-col items-center">
-        <p>✅ Confianza y transparencia 🤝</p>
-        <ul>
-          <li>Opiniones y rankings de empresas reales.</li>
-        </ul>
-      </div>
+    <!-- Áreas de servicios -->
+    <div class="flex flex-col gap-2 items-center">
+      <h4 class="text-blue-700 font-bold text-lg flex items-center gap-2">📌 Encuentra servicios en áreas como:</h4>
+      <ul class="flex flex-wrap gap-2 justify-center mt-2">
+        <li class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Marketing y publicidad</li>
+        <li class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Consultoría empresarial</li>
+        <li class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Tecnología y desarrollo web</li>
+        <li class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Logística y transporte</li>
+        <li class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-medium">Servicios legales y contabilidad</li>
+      </ul>
     </div>
 
-    <!-- which areas you can find -->
-    <div class="mt-8 flex justify-center flex-col items-center">
-      <h4>📌 Encuentra servicios en áreas como:</h4>
-
-      <div class="mt-2">
-        <ul class="list-disc">
-          <li>Marketing y publicidad</li>
-          <li>Consultoría empresarial</li>
-          <li>Tecnología y desarrollo web</li>
-          <li>Logística y transporte</li>
-          <li>Servicios legales y contabilidad</li>
-        </ul>
+    <!-- Optimiza tus costos -->
+    <div class="flex flex-col gap-2 items-center bg-gradient-to-r from-blue-100 via-indigo-50 to-teal-100 rounded-xl p-6 border border-blue-100 shadow-sm">
+      <h4 class="text-xl font-bold text-blue-700 flex items-center gap-2">🔥 Optimiza tus costos hoy mismo</h4>
+      <ul class="flex flex-col gap-1 text-gray-700 text-base">
+        <li>🚀 Regístrate GRATIS en PriceLinkr y empieza a comparar precios al instante.</li>
+        <li>📩 Sin compromiso. Sin pagos ocultos. Solo decisiones más inteligentes.</li>
+      </ul>
+      <div class="flex flex-row items-center justify-center mt-4 gap-4">
+        <button type="button" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-6 rounded-full shadow-lg transition-all text-lg" [routerLink]="'/register'">
+          Regístrate ya!
+        </button>
+        <button type="button" class="bg-white border border-blue-600 text-blue-700 font-bold py-2 px-6 rounded-full shadow-lg hover:bg-blue-50 transition-all text-lg" [routerLink]="'/login'">
+          Ya estás registrado? Inicia sesión!
+        </button>
       </div>
-    </div>
-
-    <!-- optimize costs -->
-    <div class="mt-8 flex justify-center">
-      <div class="flex-col">
-        <h4 class="flex justify-center">🔥 Optimiza tus costos hoy mismo</h4>
-
-        <ul class="mt-2 flex justify-center flex-col">
-          <li>
-            🚀 Regístrate GRATIS en PriceLinkr y empieza a comparar precios al
-            instante.
-          </li>
-          <li>
-            📩 Sin compromiso. Sin pagos ocultos. Solo decisiones más
-            inteligentes.
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- register button -->
-    <div class="flex flex-row items-center justify-center mt-2">
-      <button
-        type="button"
-        class="pricelinkr-button font-semibold"
-        [routerLink]="'/register'"
-      >
-        Regístrate ya!
-      </button>
-      <button type="button" class="pricelinkr-button ml-4 font-semibold">
-        Ya estás registrado? Inicia sesión!
-      </button>
     </div>
   </div>
 </div>
