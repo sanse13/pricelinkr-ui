@@ -12,11 +12,18 @@ import { ThemeService } from './services/theme.service';
 })
 export class AppComponent {
   title = 'pricelinkr-ui';
-  username = 'usuarioDemo';
+  username = '';
   isDarkMode = false;
+  isLoggedIn = false;
 
   constructor(private theme: ThemeService) {
     this.isDarkMode = this.theme.isDarkMode();
+    // Simulación: comprobar si hay usuario en localStorage
+    const user = localStorage.getItem('pricelinkr-user');
+    if (user) {
+      this.username = user;
+      this.isLoggedIn = true;
+    }
   }
 
   toggleDarkMode() {

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,4 +8,13 @@ import { RouterLink } from '@angular/router';
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss',
 })
-export class LoginComponent {}
+export class LoginComponent {
+  constructor(private router: Router) {}
+
+  onLogin(event: Event) {
+    event.preventDefault();
+    // Simula login: guarda usuario y navega
+    localStorage.setItem('pricelinkr-user', 'usuarioDemo');
+  this.router.navigate(['/dashboard']).then(() => window.location.reload());
+  }
+}

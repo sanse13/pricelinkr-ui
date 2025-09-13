@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-register',
@@ -7,4 +7,13 @@ import { RouterLink } from '@angular/router';
   templateUrl: './register.component.html',
   styleUrl: './register.component.scss',
 })
-export class RegisterComponent {}
+export class RegisterComponent {
+  constructor(private router: Router) {}
+
+  onRegister(event: Event) {
+    event.preventDefault();
+    // Simula registro: guarda usuario y navega
+    localStorage.setItem('pricelinkr-user', 'usuarioDemo');
+  this.router.navigate(['/dashboard']).then(() => window.location.reload());
+  }
+}
