@@ -23,6 +23,13 @@ export const routes: Routes = [
       ),
   },
   {
+    path: 'analytics',
+    loadComponent: () =>
+      import('./components/analytics/analytics.component').then(
+        (m) => m.AnalyticsComponent,
+      ),
+  },
+  {
     path: 'register',
     loadComponent: () =>
       import('./pages/register/register.component').then(
