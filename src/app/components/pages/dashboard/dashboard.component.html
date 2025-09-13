@@ -59,12 +59,10 @@
             >Actual: {{ p.currentPrice | currency: "EUR" }}</span
           >
           @if (p.currentPrice < p.lastPrice) {
-            <span
-              class="text-sm text-green-600"
+            <span class="text-sm text-green-600"
               >↓ {{ p.lastPrice - p.currentPrice | currency: "EUR" }}</span
             >
           }
-          
         </li>
       }
     </ul>
