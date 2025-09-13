@@ -1,12 +1,114 @@
-<div>
-  <!--title-->
-  <div class="flex justify-center">
-    <h1>
-      Filtra por <strong>categoría</strong> y
-      <strong class="font-semibold text-blue-300">compara precios</strong>!
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-blue-50 to-blue-100 py-16 mb-12">
+  <div class="container mx-auto px-4 flex flex-col items-center text-center">
+    <h1 class="text-4xl md:text-5xl font-bold mb-4">
+      Encuentra el <span class="text-blue-500">mejor precio</span> en segundos
     </h1>
-  </div>
+    <p class="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl">
+      Filtra por <strong>categoría</strong>, compara precios y ahorra en tus
+      compras online. ¡Rápido, fácil y gratis!
+    </p>
+    <div class="flex flex-col md:flex-row gap-4 w-full max-w-md mx-auto">
+      <select
+        [formControl]="selectedCategory"
+        name="categories"
+        class="flex-1 rounded border px-4 py-2"
+      >
+        @for (category of categories; track $index) {
+          <option [value]="category.id">{{ category.name }}</option>
+        }
+      </select>
+      <button
+        type="button"
+        class="pricelinkr-button px-6 py-2 text-lg"
+        (click)="comparePrices()"
+      >
+        Comparar precios
+      </button>
+    </div>
 
-  <!--category filter-->
-  <div></div>
-</div>
+    <!-- Resultados de comparación de precios -->
+    @if (comparedProducts.length > 0) {
+      <section class="container mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6 text-center">
+          Resultados de comparación
+        </h2>
+        <div class="flex flex-wrap justify-center gap-8">
+          @for (product of comparedProducts; track product.id) {
+            <div class="bg-white rounded-lg shadow p-6 w-full max-w-md">
+              <h3 class="font-semibold text-lg mb-2">{{ product.name }}</h3>
+              <table class="w-full text-left mb-2">
+                <thead>
+                  <tr>
+                    <th class="py-1">Tienda</th>
+                    <th class="py-1">Precio</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  @for (price of product.prices; track price.store) {
+                    <tr>
+                      <td class="py-1">{{ price.store }}</td>
+                      <td class="py-1 font-semibold">
+                        {{ price.price | currency: "EUR" }}
+                      </td>
+                    </tr>
+                  }
+                </tbody>
+              </table>
+              <div class="text-sm text-gray-500">
+                Mejor precio:
+                <span class="font-bold text-blue-600">{{
+                  product.minPrice | currency: "EUR"
+                }}</span>
+              </div>
+            </div>
+          }
+        </div>
+      </section>
+    }
+  </div>
+</section>
+
+<!-- Features Section -->
+<section class="container mx-auto px-4 py-12">
+  <div class="grid md:grid-cols-3 gap-8 text-center">
+    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+      <span class="text-blue-400 text-4xl mb-4">🔎</span>
+      <h3 class="font-semibold text-xl mb-2">Búsqueda Inteligente</h3>
+      <p class="text-gray-500">
+        Filtra y encuentra productos de múltiples tiendas en un solo lugar.
+      </p>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+      <span class="text-blue-400 text-4xl mb-4">💸</span>
+      <h3 class="font-semibold text-xl mb-2">Ahorra Dinero</h3>
+      <p class="text-gray-500">
+        Compara precios y elige la mejor oferta disponible al instante.
+      </p>
+    </div>
+    <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
+      <span class="text-blue-400 text-4xl mb-4">⚡</span>
+      <h3 class="font-semibold text-xl mb-2">Rápido y Fácil</h3>
+      <p class="text-gray-500">
+        Interfaz simple, resultados inmediatos y sin complicaciones.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="bg-blue-500 py-12 mt-12">
+  <div class="container mx-auto px-4 text-center text-white">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4">¿Listo para ahorrar?</h2>
+    <p class="mb-6">
+      Empieza a comparar precios y encuentra las mejores ofertas hoy mismo.
+    </p>
+    <button
+      type="button"
+      class="bg-white text-blue-600 font-semibold px-8 py-3 rounded shadow hover:bg-blue-100 transition"
+      (click)="comparePrices()"
+    >
+      ¡Comenzar ahora!
+    </button>
+  </div>
+</section>

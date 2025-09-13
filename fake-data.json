@@ -1,0 +1,49 @@
+{
+  "categories": [
+    { "id": 1, "name": "Electronics" },
+    { "id": 2, "name": "Books" },
+    { "id": 3, "name": "Clothing" }
+  ],
+  "products": [
+    {
+      "id": 101,
+      "name": "Smartphone X",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 699 },
+        { "store": "eBay", "price": 670 },
+        { "store": "BestBuy", "price": 710 }
+      ]
+    },
+    {
+      "id": 102,
+      "name": "Laptop Pro",
+      "categoryId": 1,
+      "prices": [
+        { "store": "Amazon", "price": 1200 },
+        { "store": "eBay", "price": 1150 },
+        { "store": "BestBuy", "price": 1250 }
+      ]
+    },
+    {
+      "id": 201,
+      "name": "Bestseller Book",
+      "categoryId": 2,
+      "prices": [
+        { "store": "Amazon", "price": 20 },
+        { "store": "eBay", "price": 18 },
+        { "store": "BookDepository", "price": 19 }
+      ]
+    },
+    {
+      "id": 301,
+      "name": "T-Shirt Basic",
+      "categoryId": 3,
+      "prices": [
+        { "store": "Amazon", "price": 15 },
+        { "store": "eBay", "price": 13 },
+        { "store": "Zara", "price": 17 }
+      ]
+    }
+  ]
+}
