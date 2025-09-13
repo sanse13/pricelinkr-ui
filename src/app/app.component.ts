@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -12,4 +13,14 @@ import { TopbarComponent } from './components/topbar/topbar.component';
 export class AppComponent {
   title = 'pricelinkr-ui';
   username = 'usuarioDemo';
+  isDarkMode = false;
+
+  constructor(private theme: ThemeService) {
+    this.isDarkMode = this.theme.isDarkMode();
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    this.theme.setDarkMode(this.isDarkMode);
+  }
 }
