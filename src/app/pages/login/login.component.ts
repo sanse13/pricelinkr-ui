@@ -15,6 +15,6 @@ export class LoginComponent {
     event.preventDefault();
     // Simula login: guarda usuario y navega
     localStorage.setItem('pricelinkr-user', 'usuarioDemo');
-  this.router.navigate(['/dashboard']).then(() => window.location.reload());
+    this.router.navigate(['/dashboard']).then(() => window.location.reload());
   }
 }
