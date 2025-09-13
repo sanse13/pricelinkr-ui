@@ -6,6 +6,7 @@ import {
   OnInit,
   Renderer2,
   ViewChild,
+  DOCUMENT
 } from '@angular/core';
 import { NgIcon, provideIcons } from '@ng-icons/core';
 import {
@@ -18,7 +19,7 @@ import {
   bootstrapSearch,
   bootstrapTrophy,
 } from '@ng-icons/bootstrap-icons';
-import { DOCUMENT } from '@angular/common';
+
 import { RouterLink } from '@angular/router';
 
 @Component({
